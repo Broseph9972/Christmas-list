@@ -1,0 +1,197 @@
+/* General Styling */
+body {
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e8e8e8; /* Slightly darker white */
+  position: relative;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #8b0000;
+  color: white;
+  padding: 1em 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+}
+
+nav a {
+  margin: 0 1em;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+main {
+  padding: 2em;
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+#gift-list h2 {
+  color: #8b0000;
+}
+
+/* Gift List */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 1em 0;
+  padding: 1em;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li div {
+  display: flex;
+  align-items: center;
+}
+
+/* Priority Numbers */
+.priority-number {
+  font-weight: bold;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+/* Checkboxes */
+li input[type="checkbox"] {
+  transform: scale(1.5); /* Bigger checkboxes */
+  margin-left: 20px; /* Spacing for priority number */
+}
+
+/* Gift Links */
+.gift-link {
+  color: #8b0000;
+  margin-left: 10px;
+  font-size: 0.9em;
+  text-decoration: underline;
+}
+
+.gift-link:hover {
+  text-decoration: none;
+}
+
+/* Toggle Visibility Button */
+.toggle-visibility {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+#toggle-visibility-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#toggle-visibility-btn img {
+  width: 48px;
+  height: 48px;
+}
+
+#toggle-label {
+  font-size: 1em;
+  margin-top: 0.5em;
+  color: #8b0000;
+}
+
+/* About Button */
+.glow-on-hover {
+  display: block;
+  margin: 2em auto;
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #111;
+  background: #fff; /* White background */
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-size: 1.2em; /* Larger text */
+  font-weight: bold; /* Bold text */
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+/* Snow Background */
+#snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-10px); }
+  100% { transform: translateY(110vh); }
+}

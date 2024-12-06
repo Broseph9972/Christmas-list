@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas Gift List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="snow-container"></div> <!-- Snow Background -->
+
+  <header>
+    <h1>🎄 Christmas Gift List 🎁</h1>
+    <nav>
+      <a href="#gift-list">Gift List</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Gift List Section -->
+    <section id="gift-list">
+      <h2>Gift List</h2>
+      <div class="toggle-visibility">
+        <button id="toggle-visibility-btn" onclick="toggleCheckboxes()">
+          <img src="closed-eye.png" alt="Eye Icon" id="toggle-eye-icon">
+        </button>
+        <p id="toggle-label">Toggle Checkboxes</p>
+      </div>
+      <ul id="gift-container">
+        <!-- Gifts will be dynamically loaded here -->
+      </ul>
+    </section>
+  </main>
+
+  <!-- About Button -->
+  <button class="glow-on-hover" type="button" onclick="toggleAbout()">About</button>
+
+  <!-- About Section -->
+  <section id="about-box" style="display: none;">
+    <h2>About</h2>
+    <p>
+      <strong>
+        Welcome, this is a gift list made by Joseph Stein as a fun little project. If you decide to get me a gift, check the box next to it. 
+        The number signifies how much I want the gift. If any of my cousins want me to remake this for them, I might be able to. 
+        FEEL FREE TO JUST GET ME ANYTHING, THIS IS JUST A FUN PROJECT. Please don’t check any boxes for no reason.
+      </strong>
+    </p>
+  </section>
+
+  <footer>
+    <p>This site is made 100% by Joseph Stein. Icons from online sources.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
