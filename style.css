@@ -120,6 +120,15 @@ li div {
   100% { transform: translateY(110vh); }
 }
 
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
 .help-icon {
   position: fixed;
   top: 10px;
@@ -135,6 +144,7 @@ li div {
   cursor: pointer;
   font-size: 20px;
   font-weight: bold;
+  animation: pulse 1.5s ease-in-out 3;
 }
 
 .popup {
